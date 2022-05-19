@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400;500;600;700;800;900');
+
+/* variables */
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    /* paragraphs: */
+    --transparent-white: hsla(0, 0%, 100%, 0.75); 
+    /* background, headings, buttons: */
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+/* general */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lexend Deca';
+    font-size: 0.9375rem;
+    color: var(--transparent-white);
+    line-height: 1.5rem;
+}
+
+
+.container {
+    max-width: 900px;
+}
+
+.container__cards {
+    display: flex;
+    border-radius: 500px;
+}
+
+/* cards */
+
+.card {
+    padding: 3rem;
+    position: relative;
+}
+
+.card a {
+    position: absolute;
+    border: 2px var(--very-light-gray) solid;
+    border-radius: 2rem;
+    padding: 0.8rem;
+    text-decoration: none;
+    background: var(--very-light-gray);
+    width: fit-content;
+    display: block;
+    bottom: 2rem;
+}
+
+.card a:hover {
+    color: white;
+    transition: .5s;
+}
+
+.card p {
+    padding-bottom: 5rem;
+}
+
+.card h1 {
+    padding: 2rem 0;
+    text-transform: uppercase;
+}
+
+/* specific cards */
+
+.container__cards--sedan {
+    background: var(--bright-orange);
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+}
+
+.container__cards--sedan a {
+    color: var(--bright-orange)
+}
+
+.container__cards--sedan a:hover {
+    background: var(--bright-orange);
+}
+
+.container__cards--suv {
+    background: var(--dark-cyan);
+}
+
+.container__cards--suv a {
+    color: var(--dark-cyan);
+}
+
+.container__cards--suv a:hover {
+    background: var(--dark-cyan);
+}
+
+.container__cards--luxury {
+    background: var(--very-dark-cyan);
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+}
+
+.container__cards--luxury a {
+    color: var(--very-dark-cyan);
+}
+
+.container__cards--luxury a:hover {
+    background: var(--very-dark-cyan);
+}
+
+.attribution {
+    color: black;
+    padding: 3rem;
+}
